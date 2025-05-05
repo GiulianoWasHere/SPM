@@ -1,3 +1,5 @@
+Fast Flow and Minizip folders are required.
+
 # Compile
 
 To compile simply execute the comand Make in the directory where the file `MakeFile` is contained.
