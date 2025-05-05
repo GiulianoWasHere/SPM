@@ -1,0 +1,36 @@
+# Compile
+
+To compile simply execute the comand Make in the directory where the file `MakeFile` is contained.
+
+Execute the `mapping_string.sh` script in the Fast Flow directory.
+
+# Execute
+
+To execute the sequential version only 2 input are required:
+
+`./SEQ_minizip [c or d] [Path to Folder or file]`
+
+ where `c`is for compressing and `d` for decompressing.
+
+To execute the sequential version 4 input are required:
+
+`./FF_minizip [c or d] [Path to Folder or file] [Number of Left Workers] [Number of Right Workers]`
+
+where `c`is for compressing and `d` for decompressing. The last two numbers are needed to specify for the numberof workers in the All2All implemented in Fast Flow.
+
+To execute the sequential version 4 input are required:
+
+`mpirun -np [Number Of Nodes] ./MPI_minizip [c or d] [Path to Folder or file] [Number of Right Workers]` 
+
+where the first number is the number of nodes, `c`is for compressing and `d` for decompressing. The last number is the number of Right Workers in the All2All.
+
+
+# Run the test
+
+To run the test go to the directory scripts using the comand `cd scripts`.
+
+Make sure all the scripts have the right permissions, to do that for all the files in the folder use the command `chmod -R +x ./`.
+
+Using `sbatch ./[NameOfTheScript]`is possible to execute the script in the cluster.
+
+In local just `./[NameOfTheScript]`.
